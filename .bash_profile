@@ -21,3 +21,6 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+# Add Julia Path
+export JULIA_DEPOT_PATH="$HOME/.julia:"
