@@ -1,3 +1,6 @@
+channels:
+  - conda-forge
 envs_dirs:
-  - ~/envs
-  - ~/shared/envs 
+  - ~/.conda/envs
+  - ~/shared/envs
+  - ~/shared-public/envs
