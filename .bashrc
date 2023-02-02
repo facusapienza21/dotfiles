@@ -318,7 +318,7 @@ fi
 if [[ "$TERM" == "dumb" ]]; then  # no colors
     PS1="${USERNAME}\h[\W]> "
 elif [[ "$WHOAMI" == "jovyan" ]]; then
-    PS1="$L_BLUE\$(__git_ps1 '(%s)')$L_PURPLE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
+    PS1="$L_BLUE\$(__git_ps1 '(%s)')$L_PURPLE\h[$L_CYAN\W${L_PURPLE}]$L_GREEN> $NO_COLOR"
     #PS1="$GREEN\$(__git_ps1 '(%s)')$L_BLUE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
     #PS1="$GREEN\$(__git_ps1 '(%s)')$L_RED${USERNAME}${L_BLUE}JupyterHub[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
 else
