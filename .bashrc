@@ -321,6 +321,8 @@ elif [[ "$WHOAMI" == "jovyan" ]]; then
     PS1="$L_BLUE\$(__git_ps1 '(%s)')$L_PURPLE\h[$L_CYAN\W${L_PURPLE}]$L_GREEN> $NO_COLOR"
     #PS1="$GREEN\$(__git_ps1 '(%s)')$L_BLUE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
     #PS1="$GREEN\$(__git_ps1 '(%s)')$L_RED${USERNAME}${L_BLUE}JupyterHub[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
+elif [[ "$WHOAMI" == "facundosapienza" ]]; then
+    PS1="$GREEN\$(__git_ps1 '(%s)')$L_BLUE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
 else
     PS1="$GREEN\$(__git_ps1 '(%s)')$L_RED${USERNAME}$L_BLUE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
     #PS1="$L_RED${USERNAME}$L_BLUE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
@@ -366,3 +368,18 @@ else
     export JUPYTER_PATH=$HOME/.local/share/jupyter
 fi
 #**********************  END OF FILE <.bashrc> *******************************
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/Users/facundosapienza/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/Users/facundosapienza/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
