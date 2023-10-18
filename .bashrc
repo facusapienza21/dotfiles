@@ -154,10 +154,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias add='pbcopy < $HOME/.address'
     alias pbclean='pbpaste | pbcopy'
     alias emacsapp='open -a /Applications/Emacs.app/'
+    
+    # Personal information aliases
     alias zoom='echo "https://berkeley.zoom.us/my/fperez" | pbcopy'
-    alias zoom2='echo "https://lbnl.zoom.us/my/fperez" | pbcopy'
-    alias email='echo "fernando.perez@berkeley.edu" | pbcopy'
-    alias orcid='echo 0000-0002-1725-9815 | pbcopy'
+    alias email='echo "fsapienza@berkeley.edu" | pbcopy'
+    alias orcid='echo 0000-0003-4252-7161 | pbcopy'
 else
     echo "No OS-specific aliases, OS unknown.";
 fi
