@@ -130,7 +130,7 @@ export ACK_OPTIONS=--text
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias ls='/bin/ls -F --color=tty'
-    alias d="pwd; ls -o"
+    alias l="pwd; ls -laho --group-directories-first"
     alias dd='pwd; ls --color -o | grep /$'
     alias dx='pwd; ls --color -o | grep ^-..x'
     alias dp='pwd; ls --color -o | grep ^-..x'
@@ -305,6 +305,8 @@ alias pyx="python -c \"import sys;from math import *;print(eval(' '.join(sys.arg
 # Interactive prompt
 if [[ "$WHOAMI" == "$MYLOGIN" ]]; then
     USERNAME=""
+elif [[ "$WHOAMI" == "jovyan" ]]; then
+    USERNAME="$WHOAMI-Facu"
 else
     USERNAME="$WHOAMI@"
 fi
@@ -318,7 +320,7 @@ fi
 if [[ "$TERM" == "dumb" ]]; then  # no colors
     PS1="${USERNAME}\h[\W]> "
 elif [[ "$WHOAMI" == "jovyan" ]]; then
-    PS1="$L_BLUE\$(__git_ps1 '(%s)')$L_PURPLE\h[$L_CYAN\W${L_PURPLE}]$L_GREEN> $NO_COLOR"
+    PS1="$L_BLUE\$(__git_ps1 '(%s)')$L_PURPLE$USERNAME[$L_CYAN\W${L_PURPLE}]$L_GREEN> $NO_COLOR"
     #PS1="$GREEN\$(__git_ps1 '(%s)')$L_BLUE\h[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
     #PS1="$GREEN\$(__git_ps1 '(%s)')$L_RED${USERNAME}${L_BLUE}JupyterHub[$L_CYAN\W${L_BLUE}]$L_GREEN> $NO_COLOR"
 elif [[ "$WHOAMI" == "facundosapienza" ]]; then

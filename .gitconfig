@@ -12,6 +12,7 @@
 
 [core]
 	excludesfile = ~/.gitignore
+	editor = nano
 
 [alias]
 	ci = commit -a
@@ -75,3 +76,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[credential "https://github.com"]
+	helper = store --file=/tmp/tmp8j037577
