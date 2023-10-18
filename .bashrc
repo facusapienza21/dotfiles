@@ -141,6 +141,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias ccopy='xclip -in -selection c'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls='/bin/ls -FG'
+    alias l="pwd; ls -laho --group-directories-first"
     alias d="pwd; ls -o"
     alias dd='pwd; ls -o | grep /$'
     alias dx='pwd; ls -o | grep ^-..x'
